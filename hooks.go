@@ -20,6 +20,13 @@ import (
 	"fmt"
 )
 
+var (
+	InfoSeverityLevel    = severityName[infoLog]
+	WarningSeverityLevel = severityName[warningLog]
+	ErrorSeverityLevel   = severityName[errorLog]
+	FatalSeverityLevel   = severityName[fatalLog]
+)
+
 // Hook to be fired when logging to a severity
 type Hook interface {
 	// SeverityLevel returns "INFO", "WARNING", "ERROR" or "FATAL"
